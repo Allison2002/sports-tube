@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Sports Tube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/styles.css">
+     <link rel="icon" href="/img/sports_tube_tab_logo.png" alt="Sports Tube" border="0">    
+    <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+  <body class="background">
+    <header>
+        <div class="hero-container-collections">
+          <div id="nav"></div>
+          <div class="hero">                             
+            <div class="hero-content">
+              <div class="hero-img">
+                <img src="/img/background-image.png" border="0" alt="Lots of different images of sports players'">             
+              </div>  
+              <div class="cat-btn">
+                <a href="/pages/All Videos/all-videos.html">Watch</a>
+                <a href="/pages/upload/">Upload</a>
+              </div>
+            </div>
+          </div>  
+        </div>
+    </header>
+    <main>  
+      <div id="upload-page">
+        <form action="/submit" method="POST">
+            <div>
+              <h1>Add New Video</h1>
+            </div>
+            <div class="form-sect"> 
+              <label for="name">Name</label>
+              <div class="name">
+                <input
+                  name="title"
+                  id="title"
+                  type="text"
+                  minlength="2"
+                  maxlength="25"
+                  placeholder="First Name"
+                  required/>
+                <input
+                  name="title"
+                  id="title"
+                  type="text"
+                  minlength="2"
+                  maxlength="25"
+                  placeholder="Last Name"
+                  required/>
+              </div>
+            </div>   
+            <div class="form-sect">
+              <label for="email">Email</label>
+              <input
+                name="email"
+                id="email"
+                type="text"
+                minlength="5"
+                maxlength="25"
+                placeholder="example@example.com"
+                required/>
+            </div>   
+             <div class="form-sect">
+              <label for="title">Title of your video</label>
+              <input
+                name="title"
+                id="title"
+                type="text"
+                minlength="2"
+                maxlength="25"
+                placeholder="Title"
+                required/>
+            </div>              
+
+            <div class="form-sect descr">
+              <label for="describe">Description</label>
+              <textarea
+                name="describe"
+                id="describe"
+                rows="10"
+                cols="40"
+                placeholder="text area content"
+                required>Describe your video...
+              </textarea> 
+            </div>  
+            <div class="form-sect">
+              <label for="video">Video</label>
+              <input 
+                id="video" 
+                name="video" 
+                type="file" 
+                required />
+            </div>  
+            <div class="form-sect">
+              <select id="choose_cata" name="choose_cata" required>
+                <option value="choose_category" selected>Choose Category</option>
+                <option value="football">Football</option>
+                <option value="basketball">Basketball</option>
+                <option value="baseball">Baseball</option>
+              </select>
+            </div>
+            <div class="radio-group first-radio">
+              <input type="radio" id="public" name="domain" value="public"/>
+              <label for="public">Public</label>
+            </div>
+            <div class="radio-group">
+              <input type="radio" id="private" name="domain" value="private"/>
+              <label for="private">Private</label>
+            </div>
+            <div class="form-sect">  
+              <button class="btn2 button" type="submit" id="submit" name="submit">Upload Video</button>
+            </div>   
+        </form>
+        <section class="join-section">
+      </div>                
+    </main>     
+      <section class="join-section">
+        <div class="join-container">
+          <div class="join-text">
+            <div><h2>Join the Sports Tube Community</h2></div>
+            <div><p>Sign up now to start streaming your favorite sports videos or upload your own content!</p></div>
+            
+          </div>
+          <div class="grid-btn">
+            <a class="btn3 button" href="#">Sign Up</a>
+            <a class="btn4 button" href="#">Visit</a>
+          </div> 
+        </div>
+      </section>      
+    </main>
+    <div id="footer"></div>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>
