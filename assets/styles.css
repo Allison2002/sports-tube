@@ -135,7 +135,7 @@ nav img {
     cursor: pointer;
     display: none; 
     align-items: center; 
-    padding: 1em; 
+    padding: .5em; 
     border-radius: 5px; 
     background-color: transparent;
 }
@@ -1205,6 +1205,10 @@ input::placeholder {
       margin-bottom: 2em; 
     }
 
+    .logo-container {
+      max-width: 20vw;
+    }
+
     .menu-toggle {
         display: flex; /* Show hamburger on mobile */
     } 
@@ -1281,7 +1285,7 @@ input::placeholder {
 
     .search-container  {
       display: flex;
-      width: 15vw;
+      width: 25vw;
       padding: .5em 0;
     }
 
