@@ -637,12 +637,20 @@ span {
   display: grid;
   grid-template-rows: 3;
   margin: auto 0;
+  padding-bottom: 3em;
 }
 
 .inner-box2-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-top: 3em;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.inner-box {
+  margin: 0 auto;
+  padding-right: 2em;
 }
 
 .inner-box strong p {
@@ -1430,6 +1438,7 @@ input::placeholder {
     }
 
     .inner-box2-grid {
+      
       margin: 0 auto;
     }
 
@@ -1438,23 +1447,17 @@ input::placeholder {
     }
 
     .sct-btn {
-      padding-left: 1em;
       padding-top: 1em;
-    }
-
-    .link {
-      padding: 1em 0;
-    }
-
-    .sct-btn {
       align-items: center;
+      margin: 0 auto;
     }
 
     .link {
+      padding: 3em 0 0;
+      align-items: center;
       width: 100%;
       font-size: 1em;
-      padding-left: 1em;
-    }
+   }
 
     .box2-2grid {
       width: 100%;
@@ -1483,7 +1486,7 @@ input::placeholder {
         display: flex;
         flex-direction: column; 
         align-items: center; 
-        width: 100%; 
+        width: 80%; 
     }
 
     .biography {
