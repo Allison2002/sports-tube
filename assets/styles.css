@@ -1483,23 +1483,29 @@ input::placeholder {
     }
 
     .biography-section {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        width: 80%; 
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      width: 80%; 
     }
 
     .biography {
-        width: 100%; 
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
+      position: relative;
+      max-width: 100%;
+      text-align: center;
+      overflow: hidden;
+      margin: 0; 
+      flex: 1;
+      transition: flex 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }    
 
     .bio-img {
       display: flex;
       justify-content: center;
-      height: 80vh; 
+      height: auto; 
       width: 100%;
       position: relative;
       overflow: hidden;
@@ -1508,44 +1514,47 @@ input::placeholder {
     .bio-img img {
       width: 100%; 
       height: auto; 
-      object-fit: cover; 
-      object-position: top center; 
-      transition: transform 0.3s ease;
+      object-fit: cover;
     }
 
     .bio-content {
-        transition: max-height 0.3s ease; 
-        overflow: hidden; 
-        max-height: 0; 
+      padding: 1em; 
+      position: absolute; 
+      bottom: 0; 
+      left: 0;
+      right: 0; 
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7); 
+      z-index: 2;
+      transition: height 0.3s ease, opacity 0.3s ease;
     }
 
     .biography.expanded .bio-content {
-        height: 300px; 
         opacity: 1; 
-        transition: max-height 0.3s ease, opacity 0.3s ease; 
+        height: 0;
+    }
+
+    .biography.expanded .bio-img img {
+        height: 90vh;
     }
 
     .bio-content p {
-      padding: 1em;
+      padding: 1em 0 0;
+      margin: 0 auto;
       text-align: center;
-      align-items: center;
       line-height: 1.5;
-      max-width: 250px;
+      max-width: 90%;
       font-size: .9em;
     }
 
-    .biography.expanded .bio-img {
-        height: 70vh; /* Adjust height when expanded */
-    }
-
     .plus-sign {
-      display: flex; /* Center plus sign */
+      display: flex;
       justify-content: center;
-      margin-top: 0.5em; /* Space above */
+      margin-top: 0.5em;
     }
 
     .toggle-btn {
-      width: 50px; /* Adjust button size */
+      width: 50px; 
       height: 50px;
     }
 
@@ -1580,7 +1589,7 @@ input::placeholder {
       bottom: 15%; /* Use the same value for both */
       left: 5%;
       transform: translateX(-50%);
-      z-index: 2; /* Ensure it is above the overlay */
+      z-index: 4; /* Ensure it is above the overlay */
     }
 
     .plus-sign img,

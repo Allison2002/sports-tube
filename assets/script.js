@@ -57,28 +57,35 @@ document.addEventListener("DOMContentLoaded", function () {
             updateHamburgerVisibility();
         });
 
-    // Biography Expand/Collapse and Button Toggle (unchanged from your original)
-    function toggleBio(bioId) {
-        const allBios = document.querySelectorAll('.biography');
-        allBios.forEach(bio => {
-            const button = bio.querySelector(".toggle-btn img");
-            const name = bio.querySelector('.bio-name');
-            if (bio.id === bioId) {
-                bio.classList.toggle('expanded'); // Toggle the expanded class
-                if (bio.classList.contains("expanded")) {
-                    button.src = "/img/white-minus-sign.png"; // Switch to minus icon
-                    name.classList.add('hidden'); // Hide bio name
+        // Function to toggle biography content
+        function toggleBio(bioId) {
+            const allBios = document.querySelectorAll('.biography');
+            allBios.forEach(bio => {
+                const button = bio.querySelector(".toggle-btn img");
+                const name = bio.querySelector('.bio-name');
+                const content = bio.querySelector('.bio-content'); // Get content
+
+                if (bio.id === bioId) {
+                    bio.classList.toggle('expanded'); // Toggle expanded class
+
+                    if (bio.classList.contains("expanded")) {
+                        button.src = "/img/white-minus-sign.png"; // Show minus icon
+                        name.classList.add('hidden'); // Hide bio name
+                        content.style.height = 'auto'; // Allow it to expand
+                    } else {
+                        button.src = "/img/white-plus-sign.png"; // Show plus icon
+                        name.classList.remove('hidden'); // Show bio name
+                        content.style.height = '0'; // Collapse content
+                    }
                 } else {
-                    button.src = "/img/white-plus-sign.png"; // Switch back to plus icon
-                    name.classList.remove('hidden'); // Show bio name
+                    bio.classList.remove('expanded'); // Collapse other biographies
+                    bio.querySelector(".toggle-btn img").src = "/img/white-plus-sign.png"; // Reset button
+                    bio.querySelector('.bio-name').classList.remove('hidden'); // Show other names
+                    content.style.height = '0'; // Collapse other contents
                 }
-            } else {
-                bio.classList.remove('expanded'); // Collapse other biographies
-                bio.querySelector(".toggle-btn img").src = "/img/white-plus-sign.png"; // Reset other buttons
-                bio.querySelector('.bio-name').classList.remove('hidden'); // Show other bio names
-            }
-        });
-    }
+            });
+        }
+
 
     // Attach event listeners to biography buttons
     const bioButtons = document.querySelectorAll('.toggle-btn');
