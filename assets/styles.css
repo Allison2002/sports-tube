@@ -45,6 +45,110 @@ p {
   letter-spacing: .02em;
 }
 
+
+/* button */
+/* Button for toggling */
+
+.toggle-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 5%; /* Position above the icons */
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3; /* Above everything else */
+}
+
+/*  button  */
+
+.button {
+    display: inline-block; /* Allows padding and margin */
+    padding: 0.75em 1.5em; /* Sufficient padding for clickability */
+    font-size: 1rem; /* Consistent font size */
+    color: white; /* Text color */
+    background-color: #1A1D9E; /* Primary color */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline for links */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.button:hover {
+    background-color: #0BD6E2; /* Change color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.button:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+.sct-btn {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-top: 1em; /* Add space above the buttons */
+}
+
+.sct-btn .link a {
+  position: relative; /* Needed for pseudo-elements */
+  color: #1A1D9E; /* Default text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+  font-size: 1.125rem; /* Consistent font size for links */
+}
+
+.sct-btn .link a:hover {
+  color: #fe0000; /* Change color on hover */
+}
+
+.sct-btn .link a::after {
+  content: ''; /* Create a pseudo-element for underline */
+  position: absolute;
+  left: 0; /* Start from the left */
+  bottom: -5px; /* Position underline */
+  height: 3px; /* Height of the underline */
+  width: 100%; /* Full width */
+  background: #fe0000; /* Underline color */
+  transform: scaleX(0); /* Start invisible */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.sct-btn .link a:hover::after {
+  transform: scaleX(1); /* Show underline on hover */
+}
+
+/* links */
+
+.link a {
+    position: relative; /* Needed for pseudo-elements */
+    color: #1A1D9E; /* Default color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.link a:hover {
+    color: #fe0000; /* Change color on hover */
+}
+
+.link a::after {
+    content: ''; /* Create a pseudo-element for underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position underline */
+    height: 3px; /* Height of the underline */
+    width: 100%; /* Full width */
+    background: #fe0000; /* Underline color */
+    transform: scaleX(0); /* Start invisible */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.link a:hover::after {
+    transform: scaleX(1); 
+}
+
+/* navigation bar */
 nav {
   position: fixed;
   top: 0;
@@ -105,7 +209,7 @@ nav ul li :hover {
 }
 
 .logo-container {
-  max-width: 8vw;
+  max-width: 12vw;
 }
 
 .logo-container img {
@@ -145,7 +249,7 @@ nav img {
   height: auto; 
 }
 
-/* hero */
+/* hero section */
 .hero-container {
   position: relative;
   max-width: 100vw;
@@ -168,21 +272,12 @@ nav img {
   max-height: 80vh;
 }
 
+.hero-img img,
 .hero img {
   width: 100vw;
   height: 100%; /* Make the image cover the entire hero section */
   object-fit: cover;
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px 4px;
-}
-
-.page-heading {
-  position: absolute;
-  text-align: left;
-  bottom: -500%;
-  left: 90%;
-  width: 40vw;
-  z-index: 10;
-  padding: 0;
 }
 
 .page-heading h1 {
@@ -204,37 +299,13 @@ nav img {
   width: 40vw;
 }
 
-.cat-btn {
+.hero-btn {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 10px;
-  padding: 1em 0 1.5em 0;
+  position: absolute;
+  top: 35em;
+  left: 5em;  
+  gap: 1.5em;
 }
-
-.cat-btn a {
-  display: inline-flex;
-  border-radius: 100px;
-  border: 1px solid #262626;
-  padding: 1em;
-  box-shadow: rgb(0 0 0 / 10%) 0px 0px 5px 2px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #7a7a7a;
-  font-weight: 700;
-  margin: 0 1em 0 0;
-  width: auto; /* Allow automatic width */
-  min-width: 120px;
-}
-
-.cat-btn a:hover {
-  border: 1.5px solid #a8a6a6;
-  background-color: #fc623faf;
-  transition: 0.1s ease-in-out, opacity 0.2s ease-in-out;
-}  
-
 
 /* video of the week */
 
@@ -264,10 +335,29 @@ nav img {
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px 4px;
 }
 
-.video-box {
-  text-align: center;
-  align-items: center;
-  padding: 4em 0;
+.video-box-text {
+  display: inline-block; /* Ensure the anchor is inline-block */
+  position: relative; /* Needed for the pseudo-element */
+  color: #1A1D9E; /* Default text color */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  text-align: center; /* Center align the text */
+}
+
+.video-box-text:hover {
+  color: #fe0000; /* Change color on hover */
+}
+
+.video-box-text:hover::after {
+  content: ''; /* Create the underline */
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position it right below the text */
+  height: 3px; /* Height of the underline */
+  width: 100%; /* Full width */
+  background: #fe0000; /* Underline color */
+  transform: scaleX(1); /* Show underline */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
 }
 
 /* biography section*/
@@ -462,109 +552,6 @@ nav img {
   transform: rotate(0); /* Keep the rotation of the minus icon stable */
 }
 
-/* Button for toggling */
-
-.toggle-btn {
-  position: absolute;
-  left: 50%;
-  bottom: 5%; /* Position above the icons */
-  transform: translateX(-50%);
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 3; /* Above everything else */
-}
-
-/* styling for framed button and arrow link */
-.link {
-  font-size: 1.125rem; /* Slightly larger for prominence */
-  transition: background-color 0.3s ease;
-}
-
-.link a {
-  color: #1A1D9E; /* Deep Electric Blue */
-  text-decoration: none;
-}
-
-.sct-btn {
-  display: flex;
-  padding: 0;
-  text-align: left;
-  align-items: first baseline;
-}
-
-
-.sign-up {
-    padding: .5em 1em;
-}
-
-.button {
-  font-size: 1.125rem; /* Slightly larger for prominence */
-  padding: .5em 1em;
-  transition: background-color 0.3s ease;
-}
-
-.btn2 {
-  border: .10em solid #fe0000; /* Deep Electric Blue */
-  color: black;
-}
-
-.btn3 {
-  background-color: white;
-  border: .10em solid white; /* Deep Electric Blue */
-
-}
-
-.btn4 {
-  border: .10em solid white; /* Deep Electric Blue */
-  color: white;
-}
-
-.button-padding {
-  padding-top: 3em;
-}
-
-.video-box a h3:hover,
-.video-box a h3:focus,
-.btn4:hover,
-a h4:hover,
-.link a:hover {
-  color: #fe0000;
-  text-decoration: underline;
-}
-
-.btn4:hover,
-.btn4:focus {
-  border-color: #fe0000;
-}
-
-.btn:focus,
-.btn:hover{
-  background-color: #fe0000;
-  color: white;
-}
-
-.btn3:hover,
-.btn3:focus,
-.btn2:hover,
-.btn2:focus {
-    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 150, 150, 0.6)); 
-    color: white; 
-    transition: background 0.3s ease;
-}
-
-.grid-btn {
-  padding-top: 2em;
-  text-align: left;
-}
-
-
-.btn {
-  background-color: #1A1D9E; /* Deep Electric Blue */
-  color: white;
-}
-
 .section-heading {
   display: flex;
   flex-direction: column;
@@ -603,6 +590,18 @@ a h4:hover,
   padding-top: 1em;
 }
 
+.single-link {
+  padding-top: 0;
+}
+
+.single-link2 {
+  padding-top: .5em;
+}
+
+.box1-211p {
+  padding-top: 2em;
+}
+
 span {
   padding-left: 1em;
 }
@@ -637,7 +636,7 @@ span {
   display: grid;
   grid-template-rows: 3;
   margin: auto 0;
-  padding-bottom: 3em;
+  padding: 0 2em 3em 0;
 }
 
 .inner-box2-grid {
@@ -653,13 +652,20 @@ span {
   padding-right: 2em;
 }
 
+.grid-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  text-align: start;
+  padding: 1.5em 0 0;
+}
 .inner-box strong p {
   padding-bottom: 1em;
 }
 
-.box2-2grid-video iframe {
-  width: 50vw;
-  height: 100%;
+.box2-2grid iframe {
+  width: 40vw;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -671,7 +677,6 @@ span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
 }
 
 .join-container {
@@ -718,7 +723,7 @@ span {
 
 .hero-img-collection img {
   width: 100vw;
-  height: 100%; /* Make the image cover the entire hero section */
+  height: 100%;
   object-fit: cover;
   object-position: center bottom;
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px 4px;
@@ -732,13 +737,13 @@ span {
     left: 0;
     right: 0;
     height: 100%; 
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%); /* Very light gradient overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%); 
     transition: background 0.5s ease-in-out; 
     z-index: 1; 
 }
 
 .hero-img-collection:hover::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.05) 100%); /* Lighter on hover */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.05) 100%); 
 }
 
 .section-title-collections {
@@ -754,10 +759,16 @@ span {
   padding: 4em 0;
 }
 
+.collections-box img,
 .collections-box iframe {
   width: 100%;
   height: 17vw;
   box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px 4px;
+}
+
+.collections-box img {
+  object-fit: cover;
+  object-position: center;
 }
 
 .collections-text p {
@@ -772,6 +783,7 @@ span {
   padding: 1em 0;
   max-width:  100%;
 }
+
 /* single video page */
 
 #single-video-page {
@@ -824,22 +836,22 @@ span {
 }
 
 .channel a h3 {
-    position: relative; /* Needed for the pseudo-element */
-    display: inline-block; /* Ensure the element only takes up as much width as its content */
-    color: #1A1D9E; /* Default text color */
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    position: relative; 
+    display: inline-block;
+    color: #1A1D9E; 
+    transition: color 0.3s ease; 
 }
 
 .channel a h3::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Adjust this value for spacing between text and underline */
-    height: 3px; /* Height of the underline */
+    bottom: -5px; 
+    height: 3px; 
     width: 100%;
-    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 150, 150, 0.6)); /* Red gradient */
-    transform: scaleX(0); /* Start with an invisible underline */
-    transition: transform 0.3s ease; /* Smooth transition for the underline */
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 150, 150, 0.6));
+    transform: scaleX(0);
+    transition: transform 0.3s ease; 
 }
 
 .bottom-nav ul li a:hover,
@@ -848,7 +860,7 @@ span {
 .footer-col ul li a:focus,
 .channel a h3:hover,
 .channel a h3:focus {
-    color: #fe0000; /* Change text color on hover/focus */
+    color: #fe0000; 
 }
 
 .bottom-nav ul li a:hover,
@@ -857,7 +869,7 @@ span {
 .footer-col ul li a:focus,
 .channel a h3:hover::after,
 .channel a h3:focus::after {
-    transform: scaleX(1); /* Scale to full width on hover/focus */
+    transform: scaleX(1);
 }
 
 .youtube-description {
@@ -902,6 +914,63 @@ span {
 .media-link2 img {
   padding-right: .5em;
 }
+
+/* Learn More Page*/
+.learn_more_contents {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.learn_more img {
+  object-fit: cover;
+  object-position: bottom;  
+}
+
+.page-heading {
+  position: absolute;
+  text-align: left;
+  top: 13em;
+  left: 5em;
+  width: 50vw;
+  z-index: 10;
+  padding: 0;
+}
+
+.page_title {
+ margin: 0 auto;
+ text-align: left;
+}
+
+.page_title h1 {
+ color: black;
+ font-size: 4rem;
+ padding: 3em 0 1em;
+}
+
+.works ol li,
+.learn_more_contents p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.lm_subheadings h2{
+  text-align: left;
+  padding: 0;
+}
+
+.lm_subheadings {
+  text-align: left;
+  padding: 3em 0 2em;
+}
+
+.works ol {
+  padding: 1em 2em;
+}
+
+.works ol li {
+  padding: .5em 0;
+}
+
 /* footer styling */
 footer {
   width: 100%;
@@ -932,6 +1001,38 @@ footer {
 
 .bottom-logo img {
   text-align: left;
+}
+
+.bottom-footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+
+.social-media {
+  max-width: 100%;
+}
+
+.social-media,
+.bottom-nav {
+  display: flex;
+  padding: 2em 0;
+}
+
+.bottom-nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 3em;
+}
+
+.footer-col ul li,
+.bottom-nav ul li {
+  list-style: none;
+}
+
+.bottom-nav ul li a,
+.bottom-nav h4 {
+  padding: 0 0.5em;
 }
 
 .footer-col-text {
@@ -1016,13 +1117,13 @@ footer {
   border-radius: 0.3125em;
   background-color: #1A1D9E; /* Deep Electric Blue */
   color: white;
-  border: .10em solid #0BD6E2;
+  border: .10em solid #1A1D9E;
   transition: background-color 0.3s ease;
 }
 
 .link a:hover,
 .link a:focus {
- color: #0BD6E2;
+ color: #fe0000;
 }
 
 /* Upload page */
@@ -1107,6 +1208,7 @@ input::placeholder {
 }
 
 
+
 /* Responsive Footer Layout */
 @media (max-width: 1024px) {
   .page-heading h1 {
@@ -1184,6 +1286,30 @@ input::placeholder {
 }      
 
 @media (max-width: 768px) {
+
+  main {
+    width: 100%;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  .button {
+      width: 100%; /* Full width on mobile for easier tapping */
+      margin-bottom: 1em; /* Add margin between buttons */
+  }
+  
+  .link a {
+      display: block; /* Stack links vertically */
+      margin-bottom: 1em; /* Spacing between links */
+  }
+
   .footer-content {
     grid-template-columns: 1fr; 
     padding-bottom: 2em;
@@ -1229,11 +1355,6 @@ input::placeholder {
 
   .join-container {
     padding: 2em; 
-  }
-
-  main {
-    width: 100%;
-    padding: 0;
   }
 
   nav {
@@ -1334,20 +1455,28 @@ input::placeholder {
   }
 
   .video-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: .5em;
+    max-width: 100%;
+    justify-content: center;
+    text-align: center;
     padding: 0; 
   }
 
   .video-box iframe {
     width: 100%;
     height: 100%;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 5px 4px;
   }
 
   .video-box {
     margin: 0 auto;
-    width: 100%;
     padding: 1em 2em;
+  }
+
+  .video-box-text {
+    text-align: center;
   }
 
   .biography-section,
@@ -1376,10 +1505,14 @@ input::placeholder {
   }
   .box2-2grid-video {
     margin: 0 auto;
+    display: flex;
     max-width: 100%;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px 4px;
   }
 
   .inner-box2-grid {
+    
     margin: 0 auto;
   }
 
@@ -1410,16 +1543,8 @@ input::placeholder {
     margin: 0;
   }
 
-  h2 {
-    font-size: 2em;
-  }
-
-  h3 {
-    font-size: 1.1em;
-  }
-
   #player-biography {
-    margin: 15em auto 0;
+    margin: 0 auto;
     width: 100%;
   }
 
@@ -1431,22 +1556,47 @@ input::placeholder {
   }
 
   .biography {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
     margin: 0; 
+    flex: 1;
+    transition: flex 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }    
 
   .bio-img {
+    display: flex;
+    justify-content: center;
     height: auto; 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bio-img img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
   }
 
   .bio-content {
     padding: 1em; 
+    position: absolute; 
     bottom: 0; 
+    left: 0;
     right: 0; 
     color: white;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 2;
     transition: height 0.3s ease, opacity 0.3s ease;
   }
 
   .biography.expanded .bio-content {
+      opacity: 1; 
       height: 0;
   }
 
@@ -1501,9 +1651,16 @@ input::placeholder {
 
   .plus-sign,
   .minus-sign {
+    position: absolute; 
     bottom: 15%; /* Use the same value for both */
     left: 5%;
+    transform: translateX(-50%);
     z-index: 4; /* Ensure it is above the overlay */
+  }
+
+  .plus-sign img,
+  .minus-sign img {
+    width: 4vw; 
   }
 
   .bio-name {
@@ -1526,16 +1683,24 @@ input::placeholder {
   }    
 
   .grid-211 {
+    display: grid;
     grid-template-columns: 1fr;
     max-width: 95%;
+    margin: 0 auto;
     gap: 1em;
     padding-bottom: 5em;
   }
 
   .box1-211 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
     padding: 1em;
   }
 
+  .box1-211 h2 {
+    padding-bottom: .5em;
+  }
 
   .box1-211 h3 {
     padding-bottom: .5em;
@@ -1556,7 +1721,9 @@ input::placeholder {
   }
 
   .join-container {
+    height: 50vh;
     padding: 1em;
+
   }
 
   .footer-col {
@@ -1586,38 +1753,6 @@ input::placeholder {
 }
 
   
-
-.bottom-footer-content {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2em;
-}
-
-.social-media {
-  max-width: 100%;
-}
-
-.social-media,
-.bottom-nav {
-  display: flex;
-  padding: 2em 0;
-}
-
-.bottom-nav ul {
-  display: flex;
-  flex-direction: row;
-  padding-left: 3em;
-}
-
-.footer-col ul li,
-.bottom-nav ul li {
-  list-style: none;
-}
-
-.bottom-nav ul li a,
-.bottom-nav h4 {
-  padding: 0 0.5em;
-}
 
 
 
