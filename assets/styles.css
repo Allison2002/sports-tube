@@ -1463,11 +1463,11 @@ input::placeholder {
   }
 
   .hero {
-    max-height: 35vh;
+    max-height: 45vh;
   }
 
   .hero img {
-    height: 35vh;
+    height: 45vh;
   }
 
   .page-heading {
@@ -1514,7 +1514,6 @@ input::placeholder {
 
   .section-title {
     display: flex;
-    margin-top: -5%;
     padding: 1em 2em;
     width: 95%;
     width: 100%;
