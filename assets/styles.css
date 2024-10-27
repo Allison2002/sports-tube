@@ -1471,12 +1471,13 @@ input::placeholder {
   }
 
   .page-heading {
-    margin: 4em;
+    margin: 4em 2em;
   }
 
   .hero-btn {
-    margin: -12.5em 2.2em;
+    margin: -12.5em 0.5em;
   }
+
   .page-heading h1 {
     font-size: 1.3rem;
     padding: 1em 0 0;
@@ -1484,7 +1485,7 @@ input::placeholder {
   }
 
   .page-heading p {
-    font-size: .625rem;
+    font-size: .725rem;
     width: 100vw;
   }
 
