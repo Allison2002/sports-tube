@@ -13,7 +13,7 @@ html, body {
   background-color: #E1E5E8;
 }
 
-body {
+html {
   overflow-x: hidden;
 }
 
@@ -1747,7 +1747,7 @@ button.btn5:hover {
     width: 100%;
   }
 
-  body {
+  html {
     overflow-x: hidden;
   }
 
@@ -1818,7 +1818,7 @@ button.btn5:hover {
   }
 
   .nav-links li a {
-    font-size: .5rem;
+    font-size: .625rem;
     padding: 0;
   }
 
