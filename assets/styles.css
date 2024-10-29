@@ -159,55 +159,66 @@ p {
 }
 
 .sct-btn .link a {
-  position: relative; /* Needed for pseudo-elements */
-  color: #1A1D9E; /* Default text color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth color transition */
-  font-size: 1.125rem; /* Consistent font size for links */
+  position: relative;
+  color: #1A1D9E;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+  font-size: 1.125rem;
 }
 
 .sct-btn .link a:hover {
-  color: #fe0000; /* Change color on hover */
+  color: #fe0000;
 }
 
 .sct-btn .link a::after {
   content: ''; /* Create a pseudo-element for underline */
   position: absolute;
-  left: 0; /* Start from the left */
-  bottom: -5px; /* Position underline */
-  height: 3px; /* Height of the underline */
-  width: 100%; /* Full width */
-  background: #fe0000; /* Underline color */
-  transform: scaleX(0); /* Start invisible */
-  transition: transform 0.3s ease; /* Smooth transition */
+  left: 0; 
+  bottom: -5px; 
+  height: 3px;
+  width: 100%; 
+  background: #fe0000; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
 }
 
 .sct-btn .link a:hover::after {
-  transform: scaleX(1); /* Show underline on hover */
+  transform: scaleX(1); 
 }
 
 /* links */
+
+.quick-links a,
 .link a {
-    position: relative; /* Needed for pseudo-elements */
-    color: #1A1D9E; /* Default color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition */
+  position: relative; 
+  color: #1A1D9E;
+  text-decoration: none;
+  transition: color 0.3s ease; 
+}
+
+.quick-links a::after,
+.link a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; 
+  height: 3px;
+  width: 100%; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
+}
+
+.quick-links a:hover::after,
+.link a:hover::after {
+    transform: scaleX(1); 
 }
 
 .link a::after {
-    content: ''; /* Create a pseudo-element for underline */
-    position: absolute;
-    left: 0;
-    bottom: -5px; /* Position underline */
-    height: 3px; /* Height of the underline */
-    width: 100%; /* Full width */
-    background: #fe0000; /* Underline color */
-    transform: scaleX(0); /* Start invisible */
-    transition: transform 0.3s ease; /* Smooth transition */
+  background: #fe0000; /* Underline color */
 }
 
-.link a:hover::after {
-    transform: scaleX(1); 
+.quick-links a::after {
+  background: cyan; /* Underline color */
 }
 
 /* navigation bar */
@@ -313,8 +324,9 @@ nav img {
 
 /* hero section */
 .hero-container {
-  position: relative;
-  max-width: 100vw;
+    position: relative; 
+    width: 100vw;
+    height: 80vh;
 }
 
 .blog-hero-section {
@@ -404,10 +416,21 @@ nav img {
   gap: 1.5em;
 }
 
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  margin: 0em 10em;
+  gap: 1.5em; 
+}
+
 /* video of the week */
 
-.section-title {
-  padding: 60em 0 0 1.5em;
+.video-week-container {
+    position: relative; /* Relative positioning ensures it follows hero-container */
+    margin-top: 20em; /* Adjust spacing as needed */
+    text-align: center;
+    padding: 1em 0;
 }
 
 .video-grid-collections,
@@ -1658,7 +1681,7 @@ button.btn5:hover {
   }
 
   .hero img {
-    height: 35vh;
+    height: 40vh;
   }
 
   .page-heading {
@@ -1673,13 +1696,24 @@ button.btn5:hover {
     font-size: 1rem;
   }
   
-  .section-title {
-    display: flex;
-    padding: 35em 2em 0;
-    width: 95%;
-    max-width: 95%;
-    text-align: center;
+  .quick-links {
+    flex-direction: row;
+    margin: 0 0 0 7em ;
+    gap: 1.5em;
   }
+
+  .quick-links a {
+    font-size: 1rem;
+    color: white;
+  }
+
+  .video-week-container {
+    position: relative; /* Relative positioning ensures it follows hero-container */
+    text-align: center;
+    padding: 1em 4em;
+    margin-top: -25em;
+    max-width: 100%;
+}
 
   .video-box {
     padding: 1em;
@@ -1744,10 +1778,13 @@ button.btn5:hover {
 
   main {
     padding: 0;
-    width: 100%;
   }
 
   html {
+    overflow-x: hidden;
+  }
+
+  body {
     overflow-x: hidden;
   }
 
@@ -1774,7 +1811,12 @@ button.btn5:hover {
   }
 
   .nav-menu li a {
-    color: #F2F7FA  ;
+    color: #F2F7FA ;
+    font-size: 1rem;
+  }
+
+  .nav-menu li {
+    padding: 0.5em;
   }
 
   nav.scrolled {
@@ -1817,11 +1859,6 @@ button.btn5:hover {
     padding: 0;
   }
 
-  .nav-links li a {
-    font-size: .625rem;
-    padding: 0;
-  }
-
   .nav-links {
     display: none; 
     flex-direction: column;
@@ -1851,11 +1888,11 @@ button.btn5:hover {
   }
 
   .hero {
-    max-height: 35vh;
+    max-height: 100vh;
   }
 
   .hero img {
-    height: 100%;
+    height: 45vh;
   }
 
   .page-heading {
@@ -1864,6 +1901,18 @@ button.btn5:hover {
 
   .hero-btn {
     margin: -12.5em 0.5em;
+  }
+
+  .quick-links {
+    flex-direction: row;
+    margin: 3em 0 0 2em ;
+    gap: 1.5em;
+  }
+
+  .quick-links a {
+    font-size: .625rem;
+    color: white;
+    max-width: 100%;
   }
 
   .page-heading h1 {
@@ -1877,9 +1926,12 @@ button.btn5:hover {
   }
 
   .hero-btn {
-    position: static;
     margin: 0; 
-    padding: 0; 
+    padding: 0 2em;
+  }
+
+  .hero-btn a {
+    font-size: .625rem;
   }
 
   .grid-button {
@@ -1895,12 +1947,12 @@ button.btn5:hover {
     margin: 0 auto;
   }
 
-  .section-title {
-    display: flex;
-    padding: 24em 2em 1em;
-    width: 95%;
-    width: 100%;
+  .video-week-container {
+    position: relative; /* Relative positioning ensures it follows hero-container */
     text-align: center;
+    padding: 1em 4em;
+    margin-top: -15em;
+    max-width: 100%;
   }
 
   .video-grid {
