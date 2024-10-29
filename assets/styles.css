@@ -1083,33 +1083,33 @@ margin: 0;
 }
 
 /* Learn More Page*/
-.learn_more_contents {
+.learn-more-contents {
   width: 80%;
   margin: 0 auto;
 }
 
-.learn_more img {
+.learn-more img {
   object-fit: cover;
   object-position: bottom;  
 }
 
-.page_title {
+.page-title {
  margin: 0 auto;
  text-align: left;
 }
 
-.page_title h1 {
+.page-title h1 {
  color: black;
  font-size: 4rem;
  padding: 3em 0 1em;
 }
 
-.lm_subheadings h2{
+.lm-subheadings h2{
   text-align: left;
   padding: 0;
 }
 
-.lm_subheadings {
+.lm-subheadings {
   text-align: left;
   padding: 3em 0 2em;
 }
@@ -1135,7 +1135,7 @@ margin: 0;
 
 .privacy ol li,
 .works ol li,
-.learn_more_contents p {
+.learn-more-contents p {
   font-size: 1.2rem;
   line-height: 1.4;
 }
@@ -1675,7 +1675,7 @@ button.btn5:hover {
 /* Responsive Footer Layout */
 @media (max-width: 1024px) {
   .hero-container-collections {
-    height: 100vh; 
+    height: 40vh; 
     top: 0;
     left: 0;
   }
@@ -1757,7 +1757,7 @@ button.btn5:hover {
 
   #collections-page {
     text-align: left;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
   }
 
   .collections-box {
@@ -1766,9 +1766,14 @@ button.btn5:hover {
 
   .collections-box iframe {
     height: 30vw;
-  }   
+  }  
 
-}      
+  .privacy-page h1,
+  .article-title h1 {
+    padding: 1.5em 0 0.5em;
+    font-size: 2.5rem;
+  }   
+} 
 
 @media (max-width: 768px) {
 
@@ -1884,7 +1889,26 @@ button.btn5:hover {
   }
 
   .hero-container-collections {
-    height: 100vh; 
+    height: 45vh; 
+  }
+
+  #collections-page {
+    padding: 2em 0;
+  }
+
+  .page-title h1 {
+    padding: 0;
+    width: 100%;
+  }
+
+  .lm-subheadings {
+    width: 100%;
+    padding: 1em 0;
+  }
+
+  #account-form,
+  form {
+    width: 100%;
   }
 
   .hero {
@@ -1948,7 +1972,7 @@ button.btn5:hover {
   }
 
   .video-week-container {
-    position: relative; /* Relative positioning ensures it follows hero-container */
+    position: relative;
     text-align: center;
     padding: 1em 4em;
     margin-top: -15em;
@@ -2304,8 +2328,10 @@ button.btn5:hover {
     border-radius: 2em;
   }
 
-  .article-title {
-    padding-bottom: 1em 0;
+  .privacy-page h1,
+  .article-title h1 {
+    padding: 1.5em 0 0.5em;
+    font-size: 2rem;
   }
 
   .article-text {
