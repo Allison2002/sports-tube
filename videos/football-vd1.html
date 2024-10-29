@@ -3,31 +3,39 @@
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Football</title>
+    <title>Sports Tube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/styles.css">
+     <link rel="icon" href="/img/sports_tube_tab_logo.png" alt="Sports Tube" border="0">    
+    <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img src="/img/sports_tube_logo.png" alt="Sports Tube Logo"/>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/football/football.html">Football</a>
-        <a href="/pages/basketball/basketball.html">Basketball</a>
-        <a href="/pages/baseball/baseball.html">Baseball</a>
-        <a href="/pages/upload/upload.html">New Video</a>
-      </nav>
+        <div class="hero-container-collections">
+          <div id="nav"></div>
+          <div class="hero">                             
+            <div class="hero-content">
+              <div class="hero-img-collection">
+                <img src="/img/biggest_hits.jpg" alt="Lots of different images of sports players'">             
+              </div>  
+              <div class="cat-btn">
+                <a href="/pages/All Videos/all-videos.html">Watch</a>
+                <a href="/pages/upload/">Upload</a>
+              </div>
+            </div>
+          </div>    
+        </div>  
     </header>
-    <main>
-      <a href="https://www.youtube.com/embed/mcqnBMMiNj4?si=35yLHtIHWn-4xnbQ">
-        <h1>Biggest Hits of the 2023-2024 NFL Season</h1>
-      </a>
-      <table>
-        <tr>
-          <td>
+    <main>      
+      <section class="article" id="single-video-page">
+        <div class="article-page box-color1">
+          <div class="single-video-title">
+            <h2>Biggest Hits of the 2023-2024</h2>
+          </div>
+          <div id="single-video">
             <iframe
               id="football-vd1"
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/mcqnBMMiNj4?si=35yLHtIHWn-4xnbQ"
               title="YouTube video player"
               frameborder="0"
@@ -35,26 +43,45 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-            <p>1,101,125 views</p>
-            <p>Mar 28, 2024</p>
-            <p>
-              Hardest Hits from the 2023-2024 NFL Season. There were a ton of
-              huge hits this year!
-            </p>
-          </td>
-        </tr>
-      </table>
+          </div>  
+          <div class="collections-text">
+            <div class="video-info"><h3>Biggest Hits of the 2023-2024 NFL Season</h3></div>
+            <div class="youtube-channel">
+              <div class="channel-icon"><img src="/img/ding-productions.jpg"></div>
+              <div class="channel">
+                <a href="https://www.youtube.com/@DingProductions"><h3>Ding Productions</h3></a>
+                <h5>1.59m subscribers</h5>
+              </div>
+              <div class="sct-btn channel-btn">
+                <a href="https://www.youtube.com/@DingProductions" type="submit" class="btn2 button">Subscribe</a>
+              </div>
+            </div>
+            <div class="youtube-description">
+              <div>
+              <p><strong>1.2m views Mar 28, 2024</strong></p>
+              </div>
+              <div>
+                <p>Hardest Hits from the 2023-2024 NFL Season. There were a ton of huge hits this year, drop a comment below if you want to see a part 2!</p>
+                <p>Thank you for watching! Subscribe for more if you enjoyed, it means a lot!</p>
+              </div> 
+            </div>
+          </div>  
+        </div>    
+      </section>
+        <section class="join-section">
+          <div class="join-container">
+            <div class="join-text">
+              <div><h2>Join the Sports Tube Community</h2></div>
+              <div><p>Sign up now to start streaming your favorite sports videos or upload your own content!</p></div>             
+            </div>
+            <div class="grid-btn">
+              <a class="btn3 button" href="/pages/account.html">Sign Up</a>
+              <a class="btn4 button" href="/index.html">Visit</a>
+            </div> 
+          </div>
+        </section>     
     </main>
-    <hr/>
-    <footer>
-      <p>&copy; Copyright</p>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/football/football.html">Football</a>
-        <a href="/pages/basketball/basketball.html">Basketball</a>
-        <a href="/pages/baseball/baseball.html">Baseball</a>
-        <a href="/pages/upload/upload.html">New Video</a>
-      </nav>
-    </footer>
+    <div id="footer"></div>
+    <script src="/assets/script.js"></script>
   </body>
-</html>
+</html>      

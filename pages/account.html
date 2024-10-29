@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Sports Community Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/styles.css">
+     <link rel="icon" href="/my_tube_blog/img/sports_community_logo.png" alt="Sports Tube" border="0">
+    <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@400;700&family=Pacifico&family=Anton&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+        <div class="blog-hero-section">
+          <div id="nav"></div>
+          <section>
+            <div class="hero-section">
+              <img src="/img/account_banner.png">
+            </div>
+          </section>
+        </div>   
+    </header>
+    <main>
+      <section class="article">
+        <div class="article-page article-color3 form-submission" id="account">
+          <div class="home-btn">
+            <a class="button" href="/index.html">Home</a>
+          </div>
+          <h2>Create Your Account</h2>
+          <form id="account-form" action="/create-account" method="POST">
+            <div class="form-inputs">
+              <label for="full-name">Full Name:</label>
+              <input type="text" id="full-name" name="full-name" required>
+            </div>
+             <div class="form-inputs">
+              <label for="dob">Date of Birth (must be over the age of 13):</label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-inputs">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-inputs">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-inputs">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required>
+            </div>
+              <div class="yes-newsletter">
+                <label for="newsletter">I agree to Sports Tube's <a href="/pages/privacy.html">Privacy Policy</a> and <a href="/pages/guidelines.html">Guidlines</a></label>
+                <input type="checkbox" id="newsletter" name="newsletter" required>
+              </div>  
+
+              <button type="submit" class="btn5 button">Create Account</button>
+          </form>
+        </div>  
+      </section>
+
+      <section class="join-section">
+        <div class="join-container">
+          <div class="join-text btn4 thankyou">
+            <div><h2>Thank you for joining the Sports Tube Community!</h2></div>
+            <a class="button" href="https://sports-tube.netlify.app/">Visit Sports Tube</a>
+          </div> 
+        </div>
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="/assets/script.js"></script>
+  </body>
+</html>

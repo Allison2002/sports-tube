@@ -3,31 +3,39 @@
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Football</title>
+    <title>Sports Tube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/styles.css">
+     <link rel="icon" href="/img/sports_tube_tab_logo.png" alt="Sports Tube" border="0">    
+    <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img src="/img/sports_tube_logo.png" alt="Sports Tube Logo"/>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/football/football.html">Football</a>
-        <a href="/pages/basketball/basketball.html">Basketball</a>
-        <a href="/pages/baseball/baseball.html">Baseball</a>
-        <a href="/pages/upload/upload.html">New Video</a>
-      </nav>
+        <div class="hero-container-collections">
+          <div id="nav"></div>
+          <div class="hero">                             
+            <div class="hero-content">
+              <div class="hero-img-collection">
+                <img src="/img/crazy-nfl.webp" alt="Lots of different images of sports players'">             
+              </div>  
+              <div class="cat-btn">
+                <a href="/pages/All Videos/all-videos.html">Watch</a>
+                <a href="/pages/upload/">Upload</a>
+              </div>
+            </div>
+          </div>    
+        </div>  
     </header>
-    <main>
-      <a href="https://www.youtube.com/embed/SQmh-KG7HqA?si=xS4JFsH8MtfAqHtJ"
-        ><h1>20 CRAZIEST Moments In NFL History..</h1></a
-      >
-      <table>
-        <tr>
-          <td>
+    <main>      
+      <section class="article" id="single-video-page">
+        <div class="article-page box-color3">
+          <div class="single-video-title">
+            <h2>20 CRAZIEST Moments</h2>
+          </div>
+          <div id="single-video">
             <iframe
               id="football-vd6"
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/SQmh-KG7HqA?si=xS4JFsH8MtfAqHtJ"
               title="YouTube video player"
               frameborder="0"
@@ -35,24 +43,63 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-            <p>1,986,722 views</p>
-            <p>May 19, 2023</p>
-            <p>These Are The 20 CRAZIEST Moments In NFL History..</p>
-            <br/>
-          </td>
-        </tr>
-      </table>
+          </div>  
+          <div class="collections-text">
+            <div class="video-info"><h3>20 CRAZIEST Moments In NFL History..</h3></div>
+            <div class="youtube-channel">
+              <div class="channel-icon"><img src="/img/rebound.jpg"></div>
+              <div class="channel">
+                <a href="https://www.youtube.com/@REBOUNDfootball"><h3>Rebound Football</h3></a>
+                <h5>339K subscribers</h5>
+              </div>
+              <div class="sct-btn channel-btn">
+                <a href="https://www.youtube.com/@REBOUNDfootball" type="submit" class="btn2 button">Subscribe</a>
+              </div>
+            </div>
+            <div class="youtube-description">
+              <div>
+              <p><strong>2.1 views  May 19, 2023</strong></p>
+              </div>
+              <div>
+                <p>These Are The 20 CRAZIEST Moments In NFL History..</p>
+              </div> 
+              <div class="media-link2">
+                <p>Rebound Social Media:</p>
+                <p> 
+                  Twitter: <a href="https://www.youtube.com/channel/UC3VKnXX4OU3W-wL8ceV-7https://x.com/ReboundCentral"><img src="/img/circular-twitter-x.png"> / reboundcentral</a>
+                </p>
+                <p> 
+                  Instagram <a href="https://www.instagram.com/reboundofficial_/"><img src="/img/circular-ig.png"> /reboundofficial_</a>
+                </p>                  
+              </div>
+              <div class="media-link2">
+                <p>Instrumentals By:</p>
+                <p> 
+                  LCS: <a href="https://www.youtube.com/channel/UCc-LuGddmv1ETE5X-UiN6iQ"><img src="/img/youtube-icon.png"> / @lcsprod </a>
+                </p>
+                <p> 
+                  Kevin MacLeod:
+                </p>
+                 <a href="https://incompetech.com/music/">https://incompetech.com/music/</a>                 
+              </div>
+            </div>
+          </div>  
+        </div>    
+      </section>
+        <section class="join-section">
+          <div class="join-container">
+            <div class="join-text">
+              <div><h2>Join the Sports Tube Community</h2></div>
+              <div><p>Sign up now to start streaming your favorite sports videos or upload your own content!</p></div>             
+            </div>
+            <div class="grid-btn">
+              <a class="btn3 button" href="/pages/account.html">Sign Up</a>
+              <a class="btn4 button" href="/index.html">Visit</a>
+            </div> 
+          </div>
+        </section>     
     </main>
-    <hr/>
-    <footer>
-      <p>&copy; Copyright</p>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/football/football.html">Football</a>
-        <a href="/pages/basketball/basketball.html">Basketball</a>
-        <a href="/pages/baseball/baseball.html">Baseball</a>
-        <a href="/pages/upload/upload.html">New Video</a>
-      </nav>
-    </footer>
+    <div id="footer"></div>
+    <script src="/assets/script.js"></script>
   </body>
-</html>
+</html>      

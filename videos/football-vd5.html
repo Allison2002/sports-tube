@@ -3,31 +3,39 @@
   <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <title>Football</title>
+    <title>Sports Tube</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/styles.css">
+     <link rel="icon" href="/img/sports_tube_tab_logo.png" alt="Sports Tube" border="0">    
+    <link href="https://fonts.cdnfonts.com/css/bentonsans-regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img src="/img/sports_tube_logo.png" alt="Sports Tube Logo"/>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/football/football.html">Football</a>
-        <a href="/pages/basketball/basketball.html">Basketball</a>
-        <a href="/pages/baseball/baseball.html">Baseball</a>
-        <a href="/pages/upload/upload.html">New Video</a>
-      </nav>
+        <div class="hero-container-collections">
+          <div id="nav"></div>
+          <div class="hero">                             
+            <div class="hero-content">
+              <div class="hero-img-collection">
+                <img src="/img/viscous-hits.jpg" alt="Lots of different images of sports players'">             
+              </div>  
+              <div class="cat-btn">
+                <a href="/pages/All Videos/all-videos.html">Watch</a>
+                <a href="/pages/upload/">Upload</a>
+              </div>
+            </div>
+          </div>    
+        </div>  
     </header>
-    <main>
-      <a href="https://www.youtube.com/embed/vAC2almlat4?si=SJPL33BcmSU897pN"
-        ><h1>Most "Vicious" Hits in Football History</h1></a
-      >
-      <table>
-        <tr>
-          <td>
+    <main>      
+      <section class="article" id="single-video-page">
+        <div class="article-page box-color2">
+          <div class="single-video-title">
+            <h2>Most "Vicious" Hits</h2>
+          </div>
+          <div id="single-video">
             <iframe
               id="football-vd5"
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/vAC2almlat4?si=SJPL33BcmSU897pN"
               title="YouTube video player"
               frameborder="0"
@@ -35,27 +43,46 @@
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
-            <p>2,838,791 views</p>
-            <p>Jul 24, 2023</p>
-            <p>
-              The biggest hits in football history! Players in this video are
-              Ray Lewis, Sean Taylor, Brian Dawkins and much more! These hits
-              are both college and the nfl!
-            </p>
-          </td>
-        </tr>
-      </table>
+          </div>  
+          <div class="collections-text">
+            <div class="video-info"><h3>Most "Vicious" Hits in Football History</h3></div>
+            <div class="youtube-channel">
+              <div class="channel-icon"><img src="/img/peak-highlights.jpg"></div>
+              <div class="channel">
+                <a href="https://www.youtube.com/@PeakHighlights"><h3>Peak Highlights</h3></a>
+                <h5>34.1K subscribers</h5>
+              </div>
+              <div class="sct-btn channel-btn">
+                <a href="https://www.youtube.com/@PeakHighlights" type="submit" class="btn2 button">Subscribe</a>
+              </div>
+            </div>
+            <div class="youtube-description">
+              <div>
+              <p><strong>3m views  Jul 24, 2023 <a href="https://www.youtube.com/hashtag/nfl">#NFL</a> <a href="https://www.youtube.com/hashtag/highlights">#highlights</a> <a href="https://www.youtube.com/hashtag/football">#football</a></strong></p>
+              </div>
+              <div>
+                <p>The biggest hits in football history! Players in this video are Ray Lewis, Sean Taylor, Brian Dawkins and much more! These hits are both college and the nfl!
+(if you guys enjoyed consider subscribing)</p>
+                <p><a href="https://www.youtube.com/hashtag/nfl">#NFL</a> <a href="https://www.youtube.com/hashtag/highlights">#highlights</a> <a href="https://www.youtube.com/hashtag/football">#football</a></p>
+              </div> 
+            </div>
+          </div>  
+        </div>    
+      </section>
+        <section class="join-section">
+          <div class="join-container">
+            <div class="join-text">
+              <div><h2>Join the Sports Tube Community</h2></div>
+              <div><p>Sign up now to start streaming your favorite sports videos or upload your own content!</p></div>             
+            </div>
+            <div class="grid-btn">
+              <a class="btn3 button" href="/pages/account.html">Sign Up</a>
+              <a class="btn4 button" href="/index.html">Visit</a>
+            </div> 
+          </div>
+        </section>     
     </main>
-    <hr/>
-    <footer>
-      <p>&copy; Copyright</p>
-      <nav>
-        <a href="/index.html">Home</a>
-        <a href="/pages/football/football.html">Football</a>
-        <a href="/pages/basketball/basketball.html">Basketball</a>
-        <a href="/pages/baseball/baseball.html">Baseball</a>
-        <a href="/pages/upload/upload.html">New Video</a>
-      </nav>
-    </footer>
+    <div id="footer"></div>
+    <script src="/assets/script.js"></script>
   </body>
-</html>
+</html>      
