@@ -117,7 +117,6 @@ p {
   z-index: 3; /* Above everything else */
 }
 
-.button a,
 .hero-buttons,
 .button {
     display: inline-block; /* Allows padding and margin */
@@ -188,7 +187,13 @@ p {
 
 /* links */
 
-.quick-links a,
+.quick-links a {
+  position: relative; 
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
 .link a {
   position: relative; 
   color: #1A1D9E;
@@ -683,6 +688,48 @@ nav img {
 .section-heading h2 {
   padding-bottom: .5em;
 }
+
+/*  category buttons */
+.categories {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  padding: 1em 0 10em;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.category-buttons2,
+.category-buttons1 {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 1.5em;
+}
+
+.category-buttons2 a,
+.category-buttons1 a {
+  margin: 0 auto;
+}
+
+.category-buttons2 {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+.categories-buttons h2 {
+  padding: .5em 0 .5em;
+  text-align: center;
+}
+
+.categories-buttons h2 {
+  padding: .5em 0 .5em;
+  text-align: center;
+}
+
+
 
 /* Styling for box 2fr 1fr 1fr */
 .grid-211 {
@@ -1672,6 +1719,24 @@ button.btn5:hover {
     background-color: #0BD6E2;
 }
 
+/*  coming soon  */
+
+.coming-soon-container {
+  width: 100%;
+  height: 120vh;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+}
+
+.background-video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
 /* Responsive Footer Layout */
 @media (max-width: 1024px) {
   .hero-container-collections {
@@ -1704,7 +1769,6 @@ button.btn5:hover {
 
   .quick-links a {
     font-size: 1rem;
-    color: white;
   }
 
   .video-week-container {
@@ -2011,6 +2075,36 @@ button.btn5:hover {
     height: 70vh;
     margin: 0 auto;
     padding: 4em 0;
+  }
+
+  .category-buttons2,
+  .category-buttons1 {
+    max-width: 80%;
+    flex-direction: column;
+    gap: .5em;
+    padding-left: 0;
+  }
+
+  .category-buttons2 a,
+  .category-buttons1 a {
+    width: 10em;
+    text-align: center;
+  }
+
+  .category-buttons2,
+  .category-box-text {
+    padding: .5em 0 1em;
+    max-width: 100%;
+  }
+
+  .category-buttons2,
+  .category-box-text h3 {
+    font-size: .625rem;
+  }
+
+  .category-buttons1 a:hover,
+  .category-buttons2 a:hover {
+      animation: wobble 0.6s ease forwards;
   }
 
   .box1-header {
@@ -2471,4 +2565,21 @@ button.btn5:hover {
   .logo-container {
     max-width: 20vw;
   }
+}
+
+/* category button affect */
+
+@keyframes wobble {
+    0% { transform: translate(0); }
+    15% { transform: translate(-5px, 0); }
+    30% { transform: translate(5px, 0); }
+    45% { transform: translate(-5px, 0); }
+    60% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
+
+.category-buttons1 a:hover,
+.category-buttons2 a:hover {
+    animation: wobble 0.6s ease forwards;
 }
